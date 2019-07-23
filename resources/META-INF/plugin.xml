@@ -1,0 +1,33 @@
+<idea-plugin>
+    <id>com.luinnx.commitplugin</id>
+    <name>CommitTips</name>
+    <version>1.0.0</version>
+    <vendor email="luinnx@gmail.com" url="">luinnx</vendor>
+
+    <description>
+        <![CDATA[
+        <h1>提交信息模板插件</h1>
+        <p>提交信息模板生成插件,用于代码提交信息书写规范化</p>
+        <p>luinnx</p>
+
+        ]]>
+    </description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="145" />
+
+    <depends>com.intellij.modules.vcs</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+
+        <action id="CommitTips" class="com.luinnx.commit.CommitPluginAction"
+            text="CommitTips" description="提交信息生成插件" icon="PluginIcons.ICON">
+            <add-to-group group-id="Vcs.MessageActionGroup" anchor="first" />
+        </action>
+    </actions>
+
+</idea-plugin>
